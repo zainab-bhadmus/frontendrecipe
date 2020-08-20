@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <h1>List of recipes</h1>
+        <hr>
+        <button onclick="window.location.href='/index.html';" class="btn btn-primary">Add New Recipe</button>
+        <br></br>
+        <div>
+            <div class="row" id="recipes">
+            </div>
+        </div>
+    </div>
+
+    <div id="editRecipeModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Recipe</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                        <form target="_blank" id="editRecipe" method="POST">
+                            <div class="form-group">
+                                <label for="id">Name</label>
+                                <input class="form-control" name="name" type="number" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Tag</label>
+                                <input class="form-control" name="id" type="text" id="id">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="ingredients">Ingredients</label>
+                                <textarea class="form-control" name="ingredients" type="text" id="ingredients"></textarea>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="directions">Directions</label>
+                                <textarea class="form-control" name="directions" id="directions"></textarea>
+                            </div>
+                
+                            <button onclick="window.location.href = '/recipe-list.html';" type="submit" class="btn btn-primary">Edit</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+        <script src="recipe-list.js"></script>
+    </body>
+    
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create New Recipe</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <h1>Create New Recipe</h1>
+        <hr>
+
+        <form target="_blank" action="http://localhost:8080/recipe/new" method="POST" >
+            <div class="form-group">
+                <label for="id">Tag</label>
+                <input class="form-control" name="id" type="number" placeholder="e.g. 1">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" name="name" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="ingredients">Ingredients</label>
+                <textarea class="form-control" name="ingredients" type="text"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Directions</label>
+                <textarea class="form-control" name="directions"></textarea>
+            </div>
+
+            <button onclick="window.location.href = '/recipe-list.html';"  type="submit" class="btn btn-primary">Create</button>
+        </form> 
+        <br>
+        <button onclick="window.location.href = '/recipe-list.html';" class="btn btn-primary">View Recipes</button>
+    </div>
+    <script>
+        function redirect() {
+            window.location.replace("/recipe-list.html");
+            return false;
+        }
+    </script>
+</body>
+
+</html>
